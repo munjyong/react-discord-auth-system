@@ -36,7 +36,7 @@ const useStyles = makeStyles({
     width: "55px",
     borderRadius: "50px",
     padding: "5px",
-    backgroundColor: "whitesmoke",
+    backgroundColor: "#ecf0f1",
     marginRight: "25px",
   },
   buttonContent: {
