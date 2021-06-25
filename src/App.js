@@ -1,3 +1,9 @@
+import {
+  Activate,
+  Dashboard,
+  Landing
+} from './pages'
+
 function App() {
   return (
     <div className="App">
