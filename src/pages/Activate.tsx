@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ActivateKey = () => {
+const Activate = () => {
   return (
     <div>
-      Dashboard
+      Activate key
     </div>
   );
 };
 
-export default ActivateKey;
+export default Activate;
