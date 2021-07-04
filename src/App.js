@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -39,10 +40,23 @@ function App() {
       return response.json();
     })
     .then((response) => {
-      console.log("🚀 | .then | response", response)
-      setAccessToken(response.access_token)
+      console.log("🚀 ~ https://discord.com/api/oauth2/token response", response)
       return response;
-    });
+    })
+    .then((response) => {
+      // OPTIONAL TODO: Find a way make the GET request working with Fetch for consistency 
+      axios.get('https://discordapp.com/api/users/@me',
+        {
+          headers: {
+            Authorization: `Bearer ${response.access_token}`
+          }
+        }
+      )
+      .then(user => {
+        console.log('🚀 ~ User data', user.data)
+        setIsAuthenticated(true)
+      })
+    })
   }
 
   if (authCode) {
