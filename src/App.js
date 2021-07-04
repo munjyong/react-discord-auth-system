@@ -29,7 +29,7 @@ function App() {
         'client_secret': 'UE8bs8wJMMLWF6EZdPx9fuW3CS_lchb9',
         'grant_type': 'client_credentials',
         'code': authCode,
-        'redirect_uri': 'http://localhost:3000/dashboard',
+        'redirect_uri': 'http://localhost:3003/dashboard',
         'scope': 'identify email'
       })
     }
