@@ -18,6 +18,15 @@ function App() {
 
   const authCode = new URLSearchParams(window.location.search).get('code')
 
+  // Protected route component
+  const ProtectedRoute = ({ 
+    component: Component, 
+    isAuth: isAuthenticated, 
+    ...rest 
+  }) => {
+    return <Route />
+  }
+  
   const getAuthResponse = async () => {
     let options = {
       url: 'https://discord.com/api/oauth2/token',
