@@ -13,8 +13,7 @@ import {
 } from './pages'
 
 function App() {
-  const [accessToken, setAccessToken] = useState("")
-  console.log("🚀 | App | accessToken", accessToken)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   const authCode = new URLSearchParams(window.location.search).get('code')
 
