@@ -23,7 +23,20 @@ function App() {
     isAuth: isAuthenticated, 
     ...rest 
   }) => {
-    return <Route />
+    return (
+      <Route 
+        {...rest} 
+        render={(props) => {
+          if (isAuthenticated) {
+            return <Component />
+          } else {
+            // If user is not authenticated then redirect to where this function was called from
+            // In this case it will always redirect to the home page
+            return <Redirect to={{ pathname: "/home", state: { from: props.location } }} />
+          }
+        }}
+      />
+    )
   }
   
   const getAuthResponse = async () => {
