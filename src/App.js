@@ -86,17 +86,9 @@ function App() {
 
   return (
     <Router>
-      <Switch>
-        <Route path='/activate'>
-          <Activate />
-        </Route>
-        <Route path='/dashboard'>
-          <Dashboard />
-        </Route>
-        <Route path='/home'>
-          <Landing />
-        </Route>
-      </Switch>
+      <Route path="/" exact>
+        <Landing />
+      </Route>
     </Router>
   )
 }
