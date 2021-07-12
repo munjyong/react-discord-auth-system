@@ -32,7 +32,7 @@ function App() {
             // In this case it will always redirect to the home page
             return (
               <Redirect
-                to={{ pathname: "/home", state: { from: props.location } }}
+                to={{ pathname: "/", state: { from: props.location } }}
               />
             )
           }
